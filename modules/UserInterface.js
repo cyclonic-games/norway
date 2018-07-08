@@ -59,7 +59,7 @@ module.exports = class UserInterface extends Module {
             window.browser.loadURL(`data:text/html,${ window.html }`);
         }
         else {
-            throw new Error('No');
+            throw new Error(`Unable to display window "${ id }": window does not exist`);
         }
     }
 }
