@@ -37,14 +37,14 @@ module.exports = class UserInterface extends Module {
                         {
                             const remote = require('electron').remote;
                             const host = global.host = remote.getGlobal('${ HOST }');
-                            const window = require('${ src }');
+                            const window = require('${ src.replace(/\\/g, '/') }');
 
                             window.open(host);
                         }
                     </script>
                 </body>
             </html>
-        `.replace(/\\/g, '/') });
+        ` });
     }
 
     render (id, options) {
