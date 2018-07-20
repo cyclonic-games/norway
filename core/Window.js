@@ -8,7 +8,7 @@ module.exports = class Window {
     }
 
     open (app) {
-        webfontloader.load({ google: { families: [ 'Open+Sans:300' ] } });
+        webfontloader.load({ google: { families: [ 'Open+Sans:300,600' ] } });
         this.fn(app);
     }
 }
